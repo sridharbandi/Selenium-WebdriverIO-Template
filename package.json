@@ -9,6 +9,8 @@
   "author": "Sridhar Bandi",
   "license": "MIT",
   "dependencies": {
+    "selenium-standalone": "^6.15.0",
+    "wdio-mocha-framework": "^0.5.13",
     "wdio-selenium-standalone-service": "0.0.10",
     "webdriverio": "^4.12.0"
   }
