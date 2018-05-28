@@ -24,7 +24,6 @@
     "chai": "^4.1.2",
     "wdio-mocha-framework": "^0.5.13",
     "wdio-selenium-standalone-service": "0.0.10",
-    "wdio-spec-reporter": "^0.1.4",
-    "yargs": "^11.0.0"
+    "wdio-spec-reporter": "^0.1.4"
   }
 }
