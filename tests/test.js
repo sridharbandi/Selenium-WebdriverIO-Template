@@ -1,16 +1,11 @@
-var webdriverio = require('webdriverio');
-var options = { desiredCapabilities: { browserName: 'chrome' } };
-var client = webdriverio.remote(options);
+import {assert} from "chai";
+import GoogleSearchPage from '../pageobjects/googlesearchpage';
+import SearchResultsPage from '../pageobjects/searchresultspage';
 
-client
-    .init()
-    .url('https://duckduckgo.com/')
-    .setValue('#search_form_input_homepage', 'WebdriverIO')
-    .click('#search_button_homepage')
-    .getTitle().then(function(title) {
-    console.log('Title is: ' + title);
-
-    // outputs:
-    // "Title is: WebdriverIO (Software) at DuckDuckGo"
-})
-    .end();
+describe('GoogleSearch Test', function () {
+    it('Search for Selenium', function () {
+        GoogleSearchPage.open();
+        GoogleSearchPage.searchfor('Selenium');
+        assert.isOk(SearchResultsPage.linkselenium, 'Selenium Link Present')
+    });
+});
